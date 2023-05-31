@@ -1,0 +1,68 @@
+
+import java.util.Scanner;
+
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+
+/**
+ *
+ * @author 102
+ */
+public class estaciones {
+    
+int selection;
+String LugarDeEstacion;
+String Ruta;
+private final Scanner input = new Scanner(System.in);
+
+public void menu(){
+
+System.out.println("--Bienvenido por favor seleccione su opcion--");
+ System.out.println("""
+                    Nuestro menu: 
+                      1) Consultar lugar de estacion
+                      2) Consultar lugar de estacion con horario extendido 
+                    """);
+    int selection = input.nextInt();
+    input.nextInt();
+    
+    
+
+    switch (selection) {
+            case 1 -> consultarEstacion();
+            case 2 -> consultarEstacionFeriados();
+            default -> System.out.println("Invalid selection.");
+}
+   
+}
+   void consultarEstacion()
+    {
+        System.out.println ("Por favor introduzca su ruta:");
+        String ruta = "";
+        Scanner entradaEscaner = new Scanner (System.in); //Creación de un objeto Scanner
+        ruta = entradaEscaner.nextLine (); //Invocamos un método sobre un objeto Scanner
+        System.out.println ("El numero de identidad que usted ha ingresado es: \"" + ruta +"\"");
+       
+       Ruta consultaRuta = new Ruta();
+       LugarDeEstacion = consultaRuta.consultarEstacion(ruta);
+       
+       System.out.println("su Ruta es " + LugarDeEstacion);
+    }
+  void consultarEstacionFeriados ()
+    {
+            System.out.println ("Las estaciones son : salitre el greco y aguascalientes");
+    }
+
+    private static class Ruta {
+
+        public Ruta() {
+        }
+
+        private String consultarEstacion(String ruta) {
+            throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        }
+    }
+
+}
