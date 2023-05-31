@@ -1,0 +1,32 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+
+/**
+ *
+ * @author 102
+ */
+public class rutas {
+    
+
+    String  consultarEstacion;
+   
+    String consultaRuta( String ruta)
+    {
+       
+        if (ruta.startsWith("1"))
+               
+                {
+                   consultarEstacion= "el salitre";
+                   
+                }
+        else {
+            consultarEstacion= "Soacha";
+        }
+
+        return consultarEstacion;
+    }
+   
+}
+
